@@ -11,38 +11,36 @@
 </head>
 <body class="dark:bg-zinc-900 text-zinc-500 text-sm flex flex-col items-center">
     <header class="fixed top-0 w-2/3 bg-white/90 dark:bg-zinc-900/90 backdrop-blur-md  border border-dashed border-zinc-200 dark:border-zinc-700 mt-4">
-        <!-- Coins "+" -->
         <span class="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 text-gray-400 text-lg">+</span>
         <span class="absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 text-gray-400 text-lg">+</span>
         <span class="absolute bottom-0 left-0 -translate-x-1/2 translate-y-1/2 text-gray-400 text-lg">+</span>
         <span class="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 text-gray-400 text-lg">+</span>
         <div class="max-w-6xl mx-auto flex items-center justify-between py-2">
-          <!-- Logo -->
           <a href="/" class="flex items-center space-x-2">
             <svg class="h-6 w-6 text-indigo-600 dark:text-indigo-400"><!-- icône --></svg>
             <span class="font-semibold text-md text-zinc-800 dark:text-zinc-400">Ben Tshims</span>
           </a>
-          <!-- Nav desktop -->
           <nav class="hidden md:flex space-x-6">
             <a href="#home" class="hover:text-amber-500">Home</a>
             <a href="#about" class="hover:text-sky-500">About</a>
             <a href="#services" class="hover:text-emerald-500">Services</a>
             <a href="#contact" class="hover:text-fuchsia-500">Contact</a>
           </nav>
-          <div class="flex items-center space-x-4 bg-black/50 border border-zinc-900 rounded-full p-1">
-            <button id="theme-toggle" aria-label="Toggle dark mode"
-              class="rounded hover:bg-gray-200 dark:hover:bg-gray-800">
-              <i class="bi bi-brightness-low-fill text-2xl text-indigo-600 dark:text-emerald-500"></i>
-              <i class="bi bi-moon-fill text-2xl text-indigo-600 dark:text-emerald-500"></i>
-
-              <i class="bi bi bi-github text-2xl text-indigo-600 dark:text-zinc-500"></i>
-            </button>
-            <button id="menu-toggle" class="md:hidden rounded hover:bg-gray-200 dark:hover:bg-gray-800">
-              <i class="bi bi-list text-2xl text-indigo-600 dark:text-indigo-400"><!-- icône --></i>
-            </button>
+          <div class="flex items-center space-x-4">
+            <div class="flex items-center bg-black/50 border border-zinc-800 rounded-full p-1 h-8 w-auto space-x-2">
+              <i class="bi bi-brightness-low-fill text-indigo-600 dark:text-emerald-500"></i>
+              <i class="bi bi-moon-fill text-indigo-600 dark:text-emerald-500"></i>
+            </div>
+            <div class="bg-black/50 border border-zinc-800 rounded-full p-1 h-8 w-8 flex items-center justify-center">
+              <i class="bi bi bi-github text-xl text-indigo-600 dark:text-zinc-400"></i>
+            </div>
+      
           </div>
+
+          <button id="menu-toggle" class="md:hidden rounded hover:bg-gray-200 dark:hover:bg-gray-800">
+            <i class="bi bi-list text-2xl text-indigo-600 dark:text-indigo-400"></i>
+          </button>
         </div>
-        <!-- Mobile menu -->
         <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
           <a href="#home" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800">Home</a>
           <a href="#about" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800">About</a>
