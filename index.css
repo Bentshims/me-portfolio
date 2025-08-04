@@ -19,3 +19,12 @@
       0% 8px         /* remonte un peu pour finir la forme */
     );
   }
+  .clip-top-right {
+    clip-path: polygon(
+      0% 0%,         /* coin haut gauche */
+      calc(100% - 12px) 0%,  /* coupe coin haut droit */
+      100% 16px,       /* pente vers le bas */
+      100% 100%,      /* coin bas droit */
+      0% 100%         /* coin bas gauche */
+    );
+  }
