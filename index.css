@@ -1,0 +1,21 @@
+.clip-corner {
+    clip-path: polygon(
+      8px 0%,  /* top-left indent */
+      calc(100% - 8px) 0%, /* top-right indent */
+      100% 8px, 
+      100% calc(100% - 8px), 
+      calc(100% - 8px) 100%, 
+      8px 100%, 
+      0% calc(100% - 8px), 
+      0% 8px
+    );
+  }
+  .clip-top-left {
+    clip-path: polygon(
+      8px 0%,        /* coupe coin haut gauche */
+      100% 0%,       /* ligne droite jusqu'au coin haut droit */
+      100% 100%,     /* coin bas droit */
+      0% 100%,       /* coin bas gauche */
+      0% 8px         /* remonte un peu pour finir la forme */
+    );
+  }
