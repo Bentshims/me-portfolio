@@ -38,6 +38,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="index.css" />
     <script src="script.js" defer></script>
+    <style>
+      .clip-path-custom {
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+      }
+    </style>
+    
   </head>
   
   
@@ -45,39 +51,44 @@
     <div class="dark:bg-zinc-900 fixed inset-0 z-40 h-4 ">
 
     </div>
-    <header class="fixed top-0 w-full md:w-2/3 bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm  border border-dashed border-zinc-200 dark:border-zinc-700 mt-4 mx-2 md:mx-0 z-50">
+    <header class="fixed top-0 w-full md:w-2/3 bg-zinc-900/80 backdrop-blur-sm  border border-zinc-200 dark:border-zinc-700 mt-4 mx-2 md:mx-0 z-50">
         <span class="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 text-gray-400 text-lg">+</span>
         <span class="absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 text-gray-400 text-lg">+</span>
         <span class="absolute bottom-0 left-0 -translate-x-1/2 translate-y-1/2 text-gray-400 text-lg">+</span>
         <span class="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 text-gray-400 text-lg">+</span>
-        <div class="max-w-6xl mx-auto flex items-center justify-between py-2">
-          <a href="/" class="flex items-center space-x-2">
-            <svg class="h-6 w-6 text-indigo-600 dark:text-indigo-400"></svg>
-            <span class="font-semibold text-md text-zinc-800 dark:text-zinc-400">Ben Tshims</span>
-          </a>
-          <nav class="hidden md:flex space-x-6">
-            <a href="#home" class="hover:text-amber-500">Home</a>
-            <a href="#about" class="hover:text-sky-500">About</a>
-            <a href="#services" class="hover:text-emerald-500">Services</a>
-            <a href="#contact" class="hover:text-fuchsia-500">Contact</a>
-          </nav>
-          <div class="flex items-center space-x-4">
-            <div class="flex items-center bg-black/50 border border-zinc-800 rounded-full py-1 px-2 h-8 w-auto space-x-2">
-              <span class="cursor-pointer"><i class="bi bi-brightness-low-fill text-xl text-indigo-600 dark:text-emerald-500"></i></span>
-              <span class="cursor-pointer bg-zinc-800 rounded-full flex items-center justify-center h-6 w-6"><i class="bi bi-moon-fill text-indigo-600 dark:text-amber-500 "></i></span>
-            </div>
-            <a href="https://github.com/Bentshims">
-              <div class="bg-black/50 border border-zinc-800 rounded-full p-1 h-8 w-8 flex items-center justify-center">
-                <i class="bi bi bi-github text-xl text-indigo-600 dark:text-zinc-400"></i>
-              </div>
+        <div class="relative w-full">
+
+          <div class="max-w-6xl mx-auto flex items-center justify-between py-2">
+            <div class="absolute inset-0 bg-[linear-gradient(#3f3f46_1px,transparent_1px),linear-gradient(90deg,#3f3f46_1px,transparent_1px)] [background-size:3px_3px] opacity-10"></div>
+            <a href="/" class="flex items-center space-x-2">
+              <svg class="h-6 w-6 text-indigo-600 dark:text-indigo-400"></svg>
+              <span class="font-semibold text-md text-zinc-800 dark:text-zinc-400">Ben Tshims</span>
             </a>
-           
-      
+            <nav class="hidden md:flex space-x-6">
+              <a href="#home" class="hover:text-amber-500">Home</a>
+              <a href="#about" class="hover:text-sky-500">About</a>
+              <a href="#services" class="hover:text-emerald-500">Services</a>
+              <a href="#contact" class="hover:text-fuchsia-500">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+              <div class="flex items-center bg-black/50 border border-zinc-800 rounded-full py-1 px-2 h-8 w-auto space-x-2">
+                <span class="cursor-pointer"><i class="bi bi-brightness-low-fill text-xl text-indigo-600 dark:text-emerald-500"></i></span>
+                <span class="cursor-pointer bg-zinc-800 rounded-full flex items-center justify-center h-6 w-6"><i class="bi bi-moon-fill text-indigo-600 dark:text-amber-500 "></i></span>
+              </div>
+              <a href="https://github.com/Bentshims">
+                <div class="bg-black/50 border border-zinc-800 rounded-full p-1 h-8 w-8 flex items-center justify-center">
+                  <i class="bi bi bi-github text-xl text-indigo-600 dark:text-zinc-400"></i>
+                </div>
+              </a>
+             
+        
+            </div>
+  
+            <button id="menu-toggle" class="md:hidden rounded hover:bg-gray-200 dark:hover:bg-gray-800">
+              <i class="bi bi-list text-2xl text-indigo-600 dark:text-indigo-400"></i>
+            </button>
           </div>
 
-          <button id="menu-toggle" class="md:hidden rounded hover:bg-gray-200 dark:hover:bg-gray-800">
-            <i class="bi bi-list text-2xl text-indigo-600 dark:text-indigo-400"></i>
-          </button>
         </div>
         <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
           <a href="#home" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800">Home</a>
@@ -87,10 +98,10 @@
         </div>
     </header>
     <main class="mt-24 w-full md:w-2/3 space-y-6">
-      <div class="static border-y border-dashed border-zinc-700 py-4 w-full">
+      <!-- <div class="static border-y border-dashed border-zinc-700 py-4 w-full">
         <p>Tshims</p>
 
-      </div>
+      </div> -->
 
 
 
@@ -127,35 +138,38 @@
         </div>
       </section>
 
-      <section class="w-full flex items-center justify-center py-16 border border-red-500 ">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center px-6">
+      <section class="w-full flex items-center justify-center py-16 border border-red-500 relative">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center px-6 min-h-48">
+          <div class="absolute inset-0 bg-[linear-gradient(#3f3f46_1px,transparent_1px),linear-gradient(90deg,#3f3f46_1px,transparent_1px)] [background-size:5px_5px] opacity-10"></div>
+          <div class="relative p-8">
+            <h2 class="text-2xl font-bold">Fond quadrillé</h2>
+          </div>
           
-          <!-- Texte -->
-          <div class="space-y-6">
-            <h1 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white leading-tight">
-              Salut, je suis <span class="text-sky-500">Tshims</span><br />
-              Développeur <span class="text-amber-500">Fullstack</span> passionné
-            </h1>
-            <p class="text-gray-600 dark:text-gray-300 text-lg">
-              Je conçois et développe des applications web & mobiles modernes en utilisant <strong>React</strong>, <strong>React Native</strong>, <strong>AdonisJS</strong> et <strong>TailwindCSS</strong>. Disponible pour missions freelance ou collaborations techniques.
-            </p>
-      
-            <div class="flex flex-wrap gap-4">
-              <button class="px-6 py-2 bg-indigo-600 text-white font-bold rounded-l-full">
-                Mon github
-              </button>
-              <button class="clip-top-right px-6 py-2 bg-amber-600 text-white font-bold rounded-md">
-                Me contacter
-              </button>
+          <!-- <div class="relative bg-white">
+            <div class="absolute inset-0 bg-[radial-gradient(#000000_1px,transparent_1px)] [background-size:16px_16px] opacity-10"></div>
+            <div class="relative p-8">
+              <!-- Ton contenu ici -->
+              <!-- <h2 class="text-2xl font-bold">Fond pointillé</h2>
             </div>
           </div>
-      
-          <div class="relative">
-            <img src="https://res.cloudinary.com/drsd8adkq/image/upload/v1748953343/3d-view-map_zbfmig.jpg" alt="Développeur Tshims" class="w-48 h-auto max-w-md mx-auto" />
-           
-          </div>
-      
+
+          <div class="relative bg-white">
+            <div class="absolute inset-0 bg-[linear-gradient(#ccc_1px,transparent_1px),linear-gradient(90deg,#ccc_1px,transparent_1px)] [background-size:20px_20px] opacity-10"></div>
+            
+          </div> -->
+          
         </div>
+        <section class="relative bg-indigo-600 text-white py-20">
+          <h2 class="text-4xl text-center font-bold">Section avec Vague</h2>
+        
+          <svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 320">
+            <path fill="#ffffff" fill-opacity="1" d="M0,160L40,170C80,180,160,200,240,197.3C320,195,400,169,480,160C560,151,640,161,720,186.7C800,213,880,255,960,272C1040,288,1120,280,1200,250.7C1280,224,1360,176,1400,152L1440,128L1440,320L0,320Z"></path>
+          </svg>
+        </section>
+        <section class="relative bg-blue-600 text-white py-20 clip-path-custom">
+          <h1 class="text-4xl font-bold text-center">Section angulaire</h1>
+        </section>
+        
       </section>
       
       
