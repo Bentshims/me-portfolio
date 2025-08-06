@@ -47,18 +47,18 @@
   </head>
   
   
-<body class="dark:bg-zinc-900 text-zinc-500 text-sm flex flex-col items-center relative border border-red-500">
-    <div class="dark:bg-zinc-900 fixed inset-0 z-40 h-4 ">
+<body class="bg-zinc-900 text-zinc-500 text-sm relative">
+    <div class="bg-zinc-900 fixed inset-0 z-40 h-4 ">
 
     </div>
-    <header class="fixed top-0 w-full md:w-2/3 bg-zinc-900/80 backdrop-blur-sm  border border-zinc-200 dark:border-zinc-700 mt-4 mx-2 md:mx-0 z-50">
+    <header class="fixed top-0 w-full bg-zinc-900/80 backdrop-blur-sm  border border-zinc-200 dark:border-zinc-700 mt-4 mx-2 md:mx-96 md:max-w-6xl z-50">
         <span class="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 text-gray-400 text-lg">+</span>
         <span class="absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 text-gray-400 text-lg">+</span>
         <span class="absolute bottom-0 left-0 -translate-x-1/2 translate-y-1/2 text-gray-400 text-lg">+</span>
         <span class="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 text-gray-400 text-lg">+</span>
         <div class="relative w-full">
 
-          <div class="max-w-6xl mx-auto flex items-center justify-between py-2">
+          <div class="mx-auto flex items-center justify-between py-2">
             <div class="absolute inset-0 bg-[linear-gradient(#3f3f46_1px,transparent_1px),linear-gradient(90deg,#3f3f46_1px,transparent_1px)] [background-size:3px_3px] opacity-10"></div>
             <a href="/" class="flex items-center space-x-2">
               <svg class="h-6 w-6 text-indigo-600 dark:text-indigo-400"></svg>
@@ -97,27 +97,29 @@
           <a href="#contact" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800">Contact</a>
         </div>
     </header>
-    <main class="w-full md:w-2/3 space-y-6 border-x border-dashed border-zinc-800 ">
+    <main class="space-y-6 border-x border-dashed border-zinc-800 ">
       <div class="h-24 w-full"></div>
 
-      <section class="w-full flex items-center justify-center py-16">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center px-6">
+      <section class="w-full flex py-16">
+        <div class="w-full">
           
           <!-- Texte -->
           <div class="space-y-6">
-            <h1 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white leading-tight">
-              Salut, je suis <span class="text-sky-500">Tshims</span><br />
-              Développeur <span class="text-amber-500">Fullstack</span> passionné
+            <h1 class="text-3xl font-semibold text-zinc-500 leading-tight border border-dashed border-zinc-800 w-full">
+              <div class="md:mx-96 md:max-w-6xl">
+                Salut, je suis <span class="text-sky-500">Tshims</span><br />
+                Développeur <span class="text-amber-500">Fullstack</span> passionné
+              </div>
             </h1>
-            <p class="text-gray-600 dark:text-gray-300 text-lg">
+            <p class="-zinc-600 text-lg md:mx-96">
               Je conçois et développe des applications web & mobiles modernes en utilisant <strong>React</strong>, <strong>React Native</strong>, <strong>AdonisJS</strong> et <strong>TailwindCSS</strong>. Disponible pour missions freelance ou collaborations techniques.
             </p>
       
-            <div class="flex flex-wrap gap-4">
-              <button class="px-6 py-2 bg-indigo-600 text-white font-bold rounded-l-full">
+            <div class="flex flex-wrap gap-4 md:mx-96">
+              <button class="px-6 py-2 bg-indigo-600 text-white font-bold">
                 Mon github
               </button>
-              <button class="clip-top-right px-6 py-2 bg-amber-600 text-white font-bold rounded-md">
+              <button class="clip-top-right px-6 py-2 bg-amber-600 text-white font-bold">
                 Me contacter
               </button>
             </div>
@@ -132,7 +134,7 @@
       </section>
 
       <section class="w-full flex items-center justify-center py-16 border border-red-500 relative">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center px-6 min-h-48">
+        <div class="mx-auto grid md:grid-cols-2 gap-10 items-center px-6 min-h-48">
           <div class="absolute inset-0 bg-[linear-gradient(#3f3f46_1px,transparent_1px),linear-gradient(90deg,#3f3f46_1px,transparent_1px)] [background-size:5px_5px] opacity-10"></div>
           <div class="relative p-8">
             <h2 class="text-2xl font-bold">Fond quadrillé</h2>
@@ -174,7 +176,7 @@
       
       
     </main>
-    <footer class="mt-24 mb-8 w-full md:w-2/3 space-y-4">
+    <footer class="mt-24 mb-8 space-y-4 md:max-w-6xl md:mx-96">
       <div class="flex items-center justify-between">
         <div class="flex flex-col items-start space-y-2">
           <a href="/" class="flex items-center space-x-2">
