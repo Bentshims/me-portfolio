@@ -1,16 +1,15 @@
-.clip-corner {
-    clip-path: polygon(
-      8px 0%,  /* top-left indent */
-      calc(100% - 8px) 0%, /* top-right indent */
-      100% 8px, 
-      100% calc(100% - 8px), 
-      calc(100% - 8px) 100%, 
-      8px 100%, 
-      0% calc(100% - 8px), 
-      0% 8px
-    );
-  }
-  .clip-top-left {
+.custom-border {
+  clip-path: polygon(
+    0% 0%,                                 /* top-left (normal) */
+    calc(100% - 8px) 0%,                   /* top-right indent start */
+    100% 8px,                              /* top-right indent end */
+    100% 100%,                             /* bottom-right */
+    8px 100%,                              /* bottom-left indent start */
+    0% calc(100% - 8px)                    /* bottom-left indent end */
+  );
+}
+
+.clip-top-left {
     clip-path: polygon(
       8px 0%,        /* coupe coin haut gauche */
       100% 0%,       /* ligne droite jusqu'au coin haut droit */
@@ -19,7 +18,7 @@
       0% 8px         /* remonte un peu pour finir la forme */
     );
   }
-  .clip-top-right {
+.clip-top-right {
     clip-path: polygon(
       0% 0%,         /* coin haut gauche */
       calc(100% - 12px) 0%,  /* coupe coin haut droit */
@@ -27,4 +26,8 @@
       100% 100%,      /* coin bas droit */
       0% 100%         /* coin bas gauche */
     );
+  }
+
+.clip-path-custom {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
   }
