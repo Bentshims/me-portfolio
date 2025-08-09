@@ -1,33 +1,120 @@
 .custom-border {
-  clip-path: polygon(
-    0% 0%,                                 /* top-left (normal) */
-    calc(100% - 8px) 0%,                   /* top-right indent start */
-    100% 8px,                              /* top-right indent end */
-    100% 100%,                             /* bottom-right */
-    8px 100%,                              /* bottom-left indent start */
-    0% calc(100% - 8px)                    /* bottom-left indent end */
-  );
+  clip-path: polygon(0% 0%,
+      /* top-left (normal) */
+      calc(100% - 8px) 0%,
+      /* top-right indent start */
+      100% 8px,
+      /* top-right indent end */
+      100% 100%,
+      /* bottom-right */
+      8px 100%,
+      /* bottom-left indent start */
+      0% calc(100% - 8px)
+      /* bottom-left indent end */
+    );
 }
 
 .clip-top-left {
-    clip-path: polygon(
-      8px 0%,        /* coupe coin haut gauche */
-      100% 0%,       /* ligne droite jusqu'au coin haut droit */
-      100% 100%,     /* coin bas droit */
-      0% 100%,       /* coin bas gauche */
-      0% 8px         /* remonte un peu pour finir la forme */
+  clip-path: polygon(8px 0%,
+      /* coupe coin haut gauche */
+      100% 0%,
+      /* ligne droite jusqu'au coin haut droit */
+      100% 100%,
+      /* coin bas droit */
+      0% 100%,
+      /* coin bas gauche */
+      0% 8px
+      /* remonte un peu pour finir la forme */
     );
-  }
+}
+
 .clip-top-right {
-    clip-path: polygon(
-      0% 0%,         /* coin haut gauche */
-      calc(100% - 12px) 0%,  /* coupe coin haut droit */
-      100% 16px,       /* pente vers le bas */
-      100% 100%,      /* coin bas droit */
-      0% 100%         /* coin bas gauche */
+  clip-path: polygon(0% 0%,
+      /* coin haut gauche */
+      calc(100% - 12px) 0%,
+      /* coupe coin haut droit */
+      100% 16px,
+      /* pente vers le bas */
+      100% 100%,
+      /* coin bas droit */
+      0% 100%
+      /* coin bas gauche */
     );
-  }
+}
 
 .clip-path-custom {
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+}
+
+/* Apparition fade-in */
+.animate-fade-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+section.opacity-0 {
+  opacity: 0;
+  transform: translateY(32px);
+}
+
+/* Slide-in pour menu mobile */
+@keyframes slideIn {
+  from {
+    transform: translateY(-40px);
+    opacity: 0;
   }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.4s cubic-bezier(.4, 2, .6, 1) forwards;
+}
+
+/* Effet lumineux sur les cartes */
+.group {
+  position: relative;
+  overflow: hidden;
+}
+
+.group::before {
+  content: '';
+  position: absolute;
+  left: var(--mouse-x, 50%);
+  top: var(--mouse-y, 50%);
+  width: 120px;
+  height: 120px;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(80, 255, 200, 0.18) 0%, transparent 80%);
+  opacity: 0.7;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s;
+  z-index: 1;
+}
+
+.group:hover::before {
+  opacity: 1;
+}
+
+/* Cercles flottants futuristes */
+.floating-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(80, 255, 200, 0.12), rgba(90, 69, 255, 0.10), rgba(255, 180, 80, 0.10));
+  filter: blur(2px);
+  animation: floatY 12s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+@keyframes floatY {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-60px);
+  }
+}
