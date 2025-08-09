@@ -68,6 +68,8 @@
 
 
 <body class="bg-zinc-900 text-zinc-500 text-sm relative font-jura">
+  <div id="digital-noise" class="fixed inset-0 pointer-events-none z-50"></div>
+  <canvas id="particles-bg" class="fixed inset-0 w-full h-full pointer-events-none z-10"></canvas>
   <div class="bg-zinc-900 fixed inset-0 z-40 h-4 ">
 
   </div>
@@ -166,45 +168,276 @@
       </div>
     </section>
 
-    <section
-      class="w-full flex items-center justify-center py-16 border-b border-dashed border-zinc-800 relative bg-zinc-900/80 backdrop-blur-sm">
-      <div class="mx-auto grid md:grid-cols-2 gap-10 items-center px-6 min-h-48">
-        <div
-          class="absolute inset-0 bg-[linear-gradient(#3f3f46_1px,transparent_1px),linear-gradient(90deg,#3f3f46_1px,transparent_1px)] [background-size:5px_5px] opacity-10">
-        </div>
+    <!-- Section À propos -->
+    <section id="about"
+      class="w-full flex justify-center py-16 border-b border-dashed border-zinc-800 relative bg-zinc-900/80 backdrop-blur-sm">
+      <div class="mx-auto grid md:grid-cols-2 gap-10 items-center px-6 min-h-48 md:max-w-5xl w-full">
         <div class="relative p-8">
-          <!-- <h2 class="text-2xl font-bold">Fond quadrillé</h2> -->
+          <h2 class="text-2xl font-orbitron text-emerald-400 mb-4">À propos de moi</h2>
+          <p class="text-zinc-400 md:text-lg leading-relaxed">
+            Passionné par la tech et l'innovation, je développe des solutions web & mobiles modernes, performantes et
+            accessibles. Mon parcours m'a permis de maîtriser les technologies les plus récentes et de collaborer sur
+            des projets variés, du site vitrine à l'application mobile complexe.<br />
+            <span class="text-amber-500">Basé en Afrique, ouvert à l'international.</span>
+          </p>
         </div>
-        <!-- 
-        <div class="relative bg-white">
+        <div class="relative flex flex-col items-center justify-center">
           <div
-            class="absolute inset-0 bg-[radial-gradient(#000000_1px,transparent_1px)] [background-size:16px_16px] opacity-10">
+            class="absolute inset-0 bg-[linear-gradient(#3f3f46_1px,transparent_1px),linear-gradient(90deg,#3f3f46_1px,transparent_1px)] [background-size:8px_8px] opacity-10 rounded-2xl">
           </div>
-          <div class="relative p-8">
-            
-            <h2 class="text-2xl font-bold">Fond pointillé</h2>
-          </div>
+          <img src="https://tshims.dev/images/avatar.jpg" alt="Tshims avatar"
+            class="w-40 h-40 rounded-full border-4 border-emerald-500 shadow-lg mb-4 bg-zinc-800/60" />
+          <span class="font-orbitron text-zinc-300 text-lg">Tshims</span>
+          <span class="text-zinc-500 text-sm">Développeur Fullstack</span>
         </div>
-
-        <div class="relative bg-white">
-          <div
-            class="absolute inset-0 bg-[linear-gradient(#ccc_1px,transparent_1px),linear-gradient(90deg,#ccc_1px,transparent_1px)] [background-size:20px_20px] opacity-10">
-          </div>
-
-        </div> -->
-
       </div>
-
-
     </section>
 
+    <!-- Section Compétences -->
+    <section id="skills"
+      class="w-full flex justify-center py-16 border-b border-dashed border-zinc-800 relative bg-zinc-900/80 backdrop-blur-sm">
+      <div class="mx-auto md:max-w-5xl w-full px-6">
+        <h2 class="text-2xl font-orbitron text-sky-400 mb-8">Compétences</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div
+            class="flex flex-col items-center bg-zinc-800/60 rounded-xl p-6 shadow-lg hover:scale-105 transition-transform">
+            <i class="bi bi-bootstrap text-4xl text-indigo-400 mb-2"></i>
+            <span class="font-jura text-zinc-300">Bootstrap</span>
+          </div>
+          <div
+            class="flex flex-col items-center bg-zinc-800/60 rounded-xl p-6 shadow-lg hover:scale-105 transition-transform">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="#61DAFB" class="mb-2">
+              <path
+                d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44-.96-.236-2.006-.417-3.107-.534-.66-.905-1.345-1.727-2.035-2.447 1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28-.686.72-1.37 1.537-2.02 2.442-1.107.117-2.154.298-3.113.538-.112-.49-.195-.964-.254-1.42-.23-1.868.054-3.32.714-3.707.19-.09.4-.127.563-.132zm4.882 3.05c.455.468.91.992 1.36 1.564-.44-.02-.89-.034-1.345-.034-.46 0-.915.01-1.36.034.44-.572.895-1.096 1.345-1.565zM12 8.1c.74 0 1.477.034 2.202.093.406.582.802 1.203 1.183 1.86.372.64.71 1.29 1.018 1.946-.308.655-.646 1.31-1.013 1.95-.38.66-.773 1.288-1.18 1.87-.728.063-1.466.098-2.21.098-.74 0-1.477-.035-2.202-.093-.406-.582-.802-1.204-1.183-1.86-.372-.64-.71-1.29-1.018-1.946.303-.657.646-1.313 1.013-1.954.38-.66.773-1.286 1.18-1.868.728-.064 1.466-.098 2.21-.098zm-3.635.254c-.24.377-.48.763-.704 1.16-.225.39-.435.782-.635 1.174-.265-.656-.49-1.31-.676-1.947.64-.15 1.315-.283 2.015-.386zm7.26 0c.695.103 1.365.23 2.006.387-.18.632-.405 1.282-.66 1.933-.2-.39-.41-.783-.64-1.174-.225-.392-.465-.774-.705-1.146zm3.063.675c.484.15.944.317 1.375.498 1.732.74 2.852 1.708 2.852 2.476-.005.768-1.125 1.74-2.857 2.475-.42.18-.88.342-1.355.493-.28-.958-.646-1.956-1.1-2.98.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98-.45 1.017-.812 2.01-1.086 2.964-.484-.15-.944-.318-1.37-.5-1.732-.737-2.852-1.706-2.852-2.474 0-.768 1.12-1.742 2.852-2.476.42-.18.88-.342 1.356-.494zm11.678 4.28c.265.657.49 1.312.676 1.948-.64.157-1.316.29-2.016.39.24-.375.48-.762.705-1.158.225-.39.435-.788.636-1.18zm-9.945.02c.2.392.41.783.64 1.175.23.39.465.772.705 1.143-.695-.102-1.365-.23-2.006-.386.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423.23 1.868-.054 3.32-.714 3.708-.147.09-.338.128-.563.128-1.012 0-2.514-.807-4.11-2.28.686-.72 1.37-1.536 2.02-2.44 1.107-.118 2.154-.3 3.113-.54zm-11.83.01c.96.234 2.006.415 3.107.532.66.905 1.345 1.727 2.035 2.446-1.595 1.483-3.092 2.295-4.11 2.295-.22-.005-.406-.05-.553-.132-.666-.38-.955-1.834-.73-3.703.054-.46.142-.944.25-1.438zm4.56.64c.44.02.89.034 1.345.034.46 0 .915-.01 1.36-.034-.44.572-.895 1.095-1.345 1.565-.455-.47-.91-.993-1.36-1.565z" />
+            </svg>
+            <span class="font-jura text-zinc-300">React</span>
+          </div>
+          <div
+            class="flex flex-col items-center bg-zinc-800/60 rounded-xl p-6 shadow-lg hover:scale-105 transition-transform">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="#38bdf8" class="mb-2">
+              <path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 
+                    C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 
+                    C16.337,6.182,14.976,4.8,12.001,4.8z 
+                    M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 
+                    c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 
+                    C10.337,13.382,8.976,12,6.001,12z" />
+            </svg>
+            <span class="font-jura text-zinc-300">TailwindCSS</span>
+          </div>
+          <div
+            class="flex flex-col items-center bg-zinc-800/60 rounded-xl p-6 shadow-lg hover:scale-105 transition-transform">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="#e34c26" class="mb-2">
+              <path
+                d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z" />
+            </svg>
+            <span class="font-jura text-zinc-300">HTML/CSS</span>
+          </div>
+          <div
+            class="flex flex-col items-center bg-zinc-800/60 rounded-xl p-6 shadow-lg hover:scale-105 transition-transform">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="#336791" class="mb-2">
+              <path
+                d="M23.5594 14.7228a.5269.5269 0 0 0-.0563-.1191c-.139-.2632-.4768-.3418-1.0074-.2321-1.6533.3411-2.2935.1312-2.5256-.0191 1.342-2.0482 2.445-4.522 3.0411-6.8297.2714-1.0507.7982-3.5237.1222-4.7316a1.5641 1.5641 0 0 0-.1509-.235C21.6931.9086 19.8007.0248 17.5099.0005c-1.4947-.0158-2.7705.3461-3.1161.4794a9.449 9.449 0 0 0-.5159-.0816 8.044 8.044 0 0 0-1.3114-.1278c-1.1822-.0184-2.2038.2642-3.0498.8406-.8573-.3211-4.7888-1.645-7.2219.0788C.9359 2.1526.3086 3.8733.4302 6.3043c.0409.818.5069 3.334 1.2423 5.7436.4598 1.5065.9387 2.7019 1.4334 3.582.553.9942 1.1259 1.5933 1.7143 1.7895.4474.1491 1.1327.1441 1.8581-.7279.8012-.9635 1.5903-1.8258 1.9446-2.2069.4351.2355.9064.3625 1.39.3772a.0569.0569 0 0 0 .0004.0041 11.0312 11.0312 0 0 0-.2472.3054c-.3389.4302-.4094.5197-1.5002.7443-.3102.064-1.1344.2339-1.1464.8115-.0025.1224.0329.2309.0919.3268.2269.4231.9216.6097 1.015.6331 1.3345.3335 2.5044.092 3.3714-.6787-.017 2.231.0775 4.4174.3454 5.0874.2212.5529.7618 1.9045 2.4692 1.9043.2505 0 .5263-.0291.8296-.0941 1.7819-.3821 2.5557-1.1696 2.855-2.9059.1503-.8707.4016-2.8753.5388-4.1012.0169-.0703.0357-.1207.057-.1362.0007-.0005.0697-.0471.4272.0307a.3673.3673 0 0 0 .0443.0068l.2539.0223.0149.001c.8468.0384 1.9114-.1426 2.5312-.4308.6438-.2988 1.8057-1.0323 1.5951-1.6698z" />
+            </svg>
+            <span class="font-jura text-zinc-300">PostgreSQL</span>
+          </div>
+          <div
+            class="flex flex-col items-center bg-zinc-800/60 rounded-xl p-6 shadow-lg hover:scale-105 transition-transform">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="#5A45FF" class="mb-2">
+              <path
+                d="M0 12c0 9.68 2.32 12 12 12s12-2.32 12-12S21.68 0 12 0 0 2.32 0 12Zm4.84 2.492 3.762-8.555C9.238 4.498 10.46 3.716 12 3.716c1.54 0 2.762.781 3.398 2.223l3.762 8.554c.172.418.32.953.32 1.418 0 2.125-1.492 3.617-3.617 3.617-.726 0-1.3-.183-1.883-.37-.597-.192-1.203-.387-1.98-.387-.77 0-1.39.195-1.996.386-.59.188-1.168.371-1.867.371-2.125 0-3.617-1.492-3.617-3.617 0-.465.148-1 .32-1.418ZM12 7.43l-3.715 8.406c1.102-.512 2.371-.758 3.715-.758 1.297 0 2.613.246 3.664.758Z" />
+            </svg>
+            <span class="font-jura text-zinc-300">AdonisJS</span>
+          </div>
+          <div
+            class="flex flex-col items-center bg-zinc-800/60 rounded-xl p-6 shadow-lg hover:scale-105 transition-transform">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="#264de4" class="mb-2">
+              <path
+                d="M0 0v20.16A3.84 3.84 0 0 0 3.84 24h16.32A3.84 3.84 0 0 0 24 20.16V3.84A3.84 3.84 0 0 0 20.16 0Zm14.256 13.08c1.56 0 2.28 1.08 2.304 2.64h-1.608c.024-.288-.048-.6-.144-.84-.096-.192-.288-.264-.552-.264-.456 0-.696.264-.696.84-.024.576.288.888.768 1.08.72.288 1.608.744 1.92 1.296q.432.648.432 1.656c0 1.608-.912 2.592-2.496 2.592-1.656 0-2.4-1.032-2.424-2.688h1.68c0 .792.264 1.176.792 1.176.264 0 .456-.072.552-.24.192-.312.24-1.176-.048-1.512-.312-.408-.912-.6-1.32-.816q-.828-.396-1.224-.936c-.24-.36-.36-.888-.36-1.536 0-1.44.936-2.472 2.424-2.448m5.4 0c1.584 0 2.304 1.08 2.328 2.64h-1.608c0-.288-.048-.6-.168-.84-.096-.192-.264-.264-.528-.264-.48 0-.72.264-.72.84s.288.888.792 1.08c.696.288 1.608.744 1.92 1.296.264.432.408.984.408 1.656.024 1.608-.888 2.592-2.472 2.592-1.68 0-2.424-1.056-2.448-2.688h1.68c0 .744.264 1.176.792 1.176.264 0 .456-.072.552-.24.216-.312.264-1.176-.048-1.512-.288-.408-.888-.6-1.32-.816-.552-.264-.96-.576-1.2-.936s-.36-.888-.36-1.536c-.024-1.44.912-2.472 2.4-2.448m-11.031.018c.711-.006 1.419.198 1.839.63.432.432.672 1.128.648 1.992H9.336c.024-.456-.096-.792-.432-.96-.312-.144-.768-.048-.888.24-.12.264-.192.576-.168.864v3.504c0 .744.264 1.128.768 1.128a.65.65 0 0 0 .552-.264c.168-.24.192-.552.168-.84h1.776c.096 1.632-.984 2.712-2.568 2.688-1.536 0-2.496-.864-2.472-2.472v-4.032c0-.816.24-1.44.696-1.848.432-.408 1.146-.624 1.857-.63" />
+            </svg>
+            <span class="font-jura text-zinc-300">Javascript</span>
+          </div>
+          <div
+            class="flex flex-col items-center bg-zinc-800/60 rounded-xl p-6 shadow-lg hover:scale-105 transition-transform">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="#fff" class="mb-2">
+              <title>Next.js</title>
+              <path
+                d="M18.665 21.978C16.758 23.255 14.465 24 12 24 5.377 24 0 18.623 0 12S5.377 0 12 0s12 5.377 12 12c0 3.583-1.574 6.801-4.067 9.001L9.219 7.2H7.2v9.596h1.615V9.251l9.85 12.727Zm-3.332-8.533 1.6 2.061V7.2h-1.6v6.245Z" />
+            </svg>
+            <span class="font-jura text-zinc-300">Next.js</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Section Projets (à venir) -->
+    <section id="projects"
+      class="w-full flex justify-center py-16 border-b border-dashed border-zinc-800 relative bg-zinc-900/80 backdrop-blur-sm">
+      <div class="mx-auto md:max-w-5xl w-full px-6">
+        <h2 class="text-2xl font-orbitron text-fuchsia-400 mb-8">Projets</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Carte Projet 1 -->
+          <div
+            class="group bg-zinc-800/60 rounded-2xl p-6 shadow-xl hover:scale-[1.03] hover:shadow-2xl transition-transform relative overflow-hidden border border-zinc-700">
+            <div
+              class="absolute inset-0 bg-[radial-gradient(circle,rgba(80,255,200,0.08)_0%,transparent_70%)] pointer-events-none">
+            </div>
+            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80"
+              alt="Projet 1" class="w-full h-40 object-cover rounded-xl mb-4 border border-zinc-700" />
+            <h3 class="font-orbitron text-lg text-emerald-400 mb-2">Dashboard Analytics</h3>
+            <p class="text-zinc-400 mb-4">Tableau de bord interactif pour visualiser des données en temps réel, avec
+              filtres avancés et animations.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-emerald-700/30 text-emerald-300 px-2 py-1 rounded text-xs font-jura">React</span>
+              <span class="bg-sky-700/30 text-sky-300 px-2 py-1 rounded text-xs font-jura">TailwindCSS</span>
+              <span class="bg-indigo-700/30 text-indigo-300 px-2 py-1 rounded text-xs font-jura">Chart.js</span>
+            </div>
+            <a href="#" target="_blank"
+              class="inline-block px-4 py-2 bg-emerald-600/20 text-emerald-300 rounded font-bold font-jura hover:bg-emerald-600/40 transition">Voir
+              le projet</a>
+          </div>
+          <!-- Carte Projet 2 -->
+          <div
+            class="group bg-zinc-800/60 rounded-2xl p-6 shadow-xl hover:scale-[1.03] hover:shadow-2xl transition-transform relative overflow-hidden border border-zinc-700">
+            <div
+              class="absolute inset-0 bg-[radial-gradient(circle,rgba(255,180,80,0.08)_0%,transparent_70%)] pointer-events-none">
+            </div>
+            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80"
+              alt="Projet 2" class="w-full h-40 object-cover rounded-xl mb-4 border border-zinc-700" />
+            <h3 class="font-orbitron text-lg text-amber-400 mb-2">App Mobile Santé</h3>
+            <p class="text-zinc-400 mb-4">Application mobile pour le suivi de la santé, notifications personnalisées et
+              synchronisation cloud.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-amber-700/30 text-amber-300 px-2 py-1 rounded text-xs font-jura">React Native</span>
+              <span class="bg-fuchsia-700/30 text-fuchsia-300 px-2 py-1 rounded text-xs font-jura">Expo</span>
+              <span class="bg-zinc-700/30 text-zinc-300 px-2 py-1 rounded text-xs font-jura">Firebase</span>
+            </div>
+            <a href="#" target="_blank"
+              class="inline-block px-4 py-2 bg-amber-600/20 text-amber-300 rounded font-bold font-jura hover:bg-amber-600/40 transition">Voir
+              le projet</a>
+          </div>
+          <!-- Carte Projet 3 -->
+          <div
+            class="group bg-zinc-800/60 rounded-2xl p-6 shadow-xl hover:scale-[1.03] hover:shadow-2xl transition-transform relative overflow-hidden border border-zinc-700 md:col-span-2">
+            <div
+              class="absolute inset-0 bg-[radial-gradient(circle,rgba(180,80,255,0.08)_0%,transparent_70%)] pointer-events-none">
+            </div>
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+              alt="Projet 3" class="w-full h-40 object-cover rounded-xl mb-4 border border-zinc-700" />
+            <h3 class="font-orbitron text-lg text-fuchsia-400 mb-2">Plateforme Freelance</h3>
+            <p class="text-zinc-400 mb-4">Plateforme web pour mettre en relation freelances et clients, gestion de
+              profils, messagerie et paiements sécurisés.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-fuchsia-700/30 text-fuchsia-300 px-2 py-1 rounded text-xs font-jura">Next.js</span>
+              <span class="bg-indigo-700/30 text-indigo-300 px-2 py-1 rounded text-xs font-jura">AdonisJS</span>
+              <span class="bg-emerald-700/30 text-emerald-300 px-2 py-1 rounded text-xs font-jura">PostgreSQL</span>
+            </div>
+            <a href="#" target="_blank"
+              class="inline-block px-4 py-2 bg-fuchsia-600/20 text-fuchsia-300 rounded font-bold font-jura hover:bg-fuchsia-600/40 transition">Voir
+              le projet</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Section Services (à venir) -->
+    <section id="services"
+      class="w-full flex justify-center py-16 border-b border-dashed border-zinc-800 relative bg-zinc-900/80 backdrop-blur-sm">
+      <div class="mx-auto md:max-w-5xl w-full px-6">
+        <h2 class="text-2xl font-orbitron text-emerald-400 mb-8">Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div
+            class="flex flex-col items-center bg-zinc-800/60 rounded-2xl p-8 shadow-xl hover:scale-105 transition-transform border border-emerald-700">
+            <i class="bi bi-window text-4xl text-emerald-400 mb-4"></i>
+            <h3 class="font-orbitron text-lg text-emerald-400 mb-2">Développement Web</h3>
+            <p class="text-zinc-400 text-center">Sites vitrines, applications web modernes, dashboards, e-commerce, SEO,
+              performance et accessibilité.</p>
+          </div>
+          <!-- Service 2 -->
+          <div
+            class="flex flex-col items-center bg-zinc-800/60 rounded-2xl p-8 shadow-xl hover:scale-105 transition-transform border border-sky-700">
+            <i class="bi bi-phone text-4xl text-sky-400 mb-4"></i>
+            <h3 class="font-orbitron text-lg text-sky-400 mb-2">Développement Mobile</h3>
+            <p class="text-zinc-400 text-center">Applications mobiles cross-platform (iOS & Android) performantes, UI/UX
+              soignée, notifications, synchronisation cloud.</p>
+          </div>
+          <!-- Service 3 -->
+          <div
+            class="flex flex-col items-center bg-zinc-800/60 rounded-2xl p-8 shadow-xl hover:scale-105 transition-transform border border-amber-700">
+            <i class="bi bi-lightbulb text-4xl text-amber-400 mb-4"></i>
+            <h3 class="font-orbitron text-lg text-amber-400 mb-2">Conseil & Formation</h3>
+            <p class="text-zinc-400 text-center">Accompagnement technique, audit, formation sur les technologies
+              modernes, ateliers personnalisés.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Section Témoignages (à venir) -->
+    <section id="testimonials"
+      class="w-full flex justify-center py-16 border-b border-dashed border-zinc-800 relative bg-zinc-900/80 backdrop-blur-sm">
+      <div class="mx-auto md:max-w-5xl w-full px-6">
+        <h2 class="text-2xl font-orbitron text-amber-400 mb-8">Témoignages</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Témoignages à venir -->
+        </div>
+      </div>
+    </section>
 
-
-
-
+    <!-- Section Contact -->
+    <section id="contact"
+      class="w-full flex justify-center py-16 border-b border-dashed border-zinc-800 relative bg-zinc-900/80 backdrop-blur-sm">
+      <div class="mx-auto md:max-w-5xl w-full px-6">
+        <h2 class="text-2xl font-orbitron text-indigo-400 mb-8">Contact</h2>
+        <div class="flex flex-col md:flex-row gap-8">
+          <!-- Formulaire de contact -->
+          <form class="flex-1 bg-zinc-800/60 rounded-2xl p-8 shadow-xl border border-indigo-700 flex flex-col gap-4">
+            <div>
+              <label for="name" class="block text-zinc-400 font-jura mb-1">Nom</label>
+              <input type="text" id="name" name="name" required
+                class="w-full px-4 py-2 rounded bg-zinc-900/80 border border-zinc-700 text-zinc-200 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+            </div>
+            <div>
+              <label for="email" class="block text-zinc-400 font-jura mb-1">Email</label>
+              <input type="email" id="email" name="email" required
+                class="w-full px-4 py-2 rounded bg-zinc-900/80 border border-zinc-700 text-zinc-200 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+            </div>
+            <div>
+              <label for="message" class="block text-zinc-400 font-jura mb-1">Message</label>
+              <textarea id="message" name="message" rows="4" required
+                class="w-full px-4 py-2 rounded bg-zinc-900/80 border border-zinc-700 text-zinc-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+            </div>
+            <button type="submit"
+              class="px-6 py-2 bg-indigo-600/20 text-indigo-300 rounded font-bold font-jura hover:bg-indigo-600/40 transition">Envoyer</button>
+          </form>
+          <!-- Infos de contact -->
+          <div
+            class="flex-1 flex flex-col gap-6 justify-center items-start bg-zinc-800/60 rounded-2xl p-8 shadow-xl border border-indigo-700">
+            <div class="flex items-center gap-3">
+              <i class="bi bi-envelope text-xl text-indigo-400"></i>
+              <span class="text-zinc-300 font-jura">tshims.dev@gmail.com</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="bi bi-telephone text-xl text-indigo-400"></i>
+              <span class="text-zinc-300 font-jura">+243 000 000 000</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="bi bi-github text-xl text-indigo-400"></i>
+              <a href="https://github.com/Bentshims"
+                class="text-zinc-300 font-jura hover:text-emerald-400 transition">github.com/Bentshims</a>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="bi bi-linkedin text-xl text-indigo-400"></i>
+              <a href="#" class="text-zinc-300 font-jura hover:text-sky-400 transition">LinkedIn</a>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="bi bi-twitter-x text-xl text-indigo-400"></i>
+              <a href="#" class="text-zinc-300 font-jura hover:text-fuchsia-400 transition">Twitter</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
   <div class="fixed -bottom-32 z-[-10] flex w-full flex justify-center">
