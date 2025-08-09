@@ -343,7 +343,30 @@
       <div class="mx-auto md:max-w-5xl w-full px-6">
         <h2 class="text-2xl font-orbitron text-emerald-400 mb-8">Services</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Cartes services à venir -->
+          <!-- Service 1 -->
+          <div
+            class="flex flex-col items-center bg-zinc-800/60 rounded-2xl p-8 shadow-xl hover:scale-105 transition-transform border border-emerald-700">
+            <i class="bi bi-window text-4xl text-emerald-400 mb-4"></i>
+            <h3 class="font-orbitron text-lg text-emerald-400 mb-2">Développement Web</h3>
+            <p class="text-zinc-400 text-center">Sites vitrines, applications web modernes, dashboards, e-commerce, SEO,
+              performance et accessibilité.</p>
+          </div>
+          <!-- Service 2 -->
+          <div
+            class="flex flex-col items-center bg-zinc-800/60 rounded-2xl p-8 shadow-xl hover:scale-105 transition-transform border border-sky-700">
+            <i class="bi bi-phone text-4xl text-sky-400 mb-4"></i>
+            <h3 class="font-orbitron text-lg text-sky-400 mb-2">Développement Mobile</h3>
+            <p class="text-zinc-400 text-center">Applications mobiles cross-platform (iOS & Android) performantes, UI/UX
+              soignée, notifications, synchronisation cloud.</p>
+          </div>
+          <!-- Service 3 -->
+          <div
+            class="flex flex-col items-center bg-zinc-800/60 rounded-2xl p-8 shadow-xl hover:scale-105 transition-transform border border-amber-700">
+            <i class="bi bi-lightbulb text-4xl text-amber-400 mb-4"></i>
+            <h3 class="font-orbitron text-lg text-amber-400 mb-2">Conseil & Formation</h3>
+            <p class="text-zinc-400 text-center">Accompagnement technique, audit, formation sur les technologies
+              modernes, ateliers personnalisés.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -359,17 +382,60 @@
       </div>
     </section>
 
-    <!-- Section Contact (à venir) -->
+    <!-- Section Contact -->
     <section id="contact"
       class="w-full flex justify-center py-16 border-b border-dashed border-zinc-800 relative bg-zinc-900/80 backdrop-blur-sm">
       <div class="mx-auto md:max-w-5xl w-full px-6">
         <h2 class="text-2xl font-orbitron text-indigo-400 mb-8">Contact</h2>
         <div class="flex flex-col md:flex-row gap-8">
-          <!-- Formulaire et infos à venir -->
+          <!-- Formulaire de contact -->
+          <form class="flex-1 bg-zinc-800/60 rounded-2xl p-8 shadow-xl border border-indigo-700 flex flex-col gap-4">
+            <div>
+              <label for="name" class="block text-zinc-400 font-jura mb-1">Nom</label>
+              <input type="text" id="name" name="name" required
+                class="w-full px-4 py-2 rounded bg-zinc-900/80 border border-zinc-700 text-zinc-200 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+            </div>
+            <div>
+              <label for="email" class="block text-zinc-400 font-jura mb-1">Email</label>
+              <input type="email" id="email" name="email" required
+                class="w-full px-4 py-2 rounded bg-zinc-900/80 border border-zinc-700 text-zinc-200 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+            </div>
+            <div>
+              <label for="message" class="block text-zinc-400 font-jura mb-1">Message</label>
+              <textarea id="message" name="message" rows="4" required
+                class="w-full px-4 py-2 rounded bg-zinc-900/80 border border-zinc-700 text-zinc-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+            </div>
+            <button type="submit"
+              class="px-6 py-2 bg-indigo-600/20 text-indigo-300 rounded font-bold font-jura hover:bg-indigo-600/40 transition">Envoyer</button>
+          </form>
+          <!-- Infos de contact -->
+          <div
+            class="flex-1 flex flex-col gap-6 justify-center items-start bg-zinc-800/60 rounded-2xl p-8 shadow-xl border border-indigo-700">
+            <div class="flex items-center gap-3">
+              <i class="bi bi-envelope text-xl text-indigo-400"></i>
+              <span class="text-zinc-300 font-jura">tshims.dev@gmail.com</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="bi bi-telephone text-xl text-indigo-400"></i>
+              <span class="text-zinc-300 font-jura">+243 000 000 000</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="bi bi-github text-xl text-indigo-400"></i>
+              <a href="https://github.com/Bentshims"
+                class="text-zinc-300 font-jura hover:text-emerald-400 transition">github.com/Bentshims</a>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="bi bi-linkedin text-xl text-indigo-400"></i>
+              <a href="#" class="text-zinc-300 font-jura hover:text-sky-400 transition">LinkedIn</a>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="bi bi-twitter-x text-xl text-indigo-400"></i>
+              <a href="#" class="text-zinc-300 font-jura hover:text-fuchsia-400 transition">Twitter</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-
 
   </main>
   <div class="fixed -bottom-32 z-[-10] flex w-full flex justify-center">
