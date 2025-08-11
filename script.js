@@ -39,21 +39,21 @@ if (menuToggle && mobileMenu) {
 }
 
 // Objets animés flottants (cercles SVG)
-function createFloatingObjects() {
-        const container = document.createElement('div');
-        container.className = 'fixed top-0 left-0 w-full h-full pointer-events-none z-0';
-        for (let i = 0; i < 8; i++) {
-                const circle = document.createElement('div');
-                circle.className = 'floating-circle';
-                circle.style.left = `${Math.random() * 100}%`;
-                circle.style.top = `${Math.random() * 100}%`;
-                circle.style.width = circle.style.height = `${40 + Math.random() * 60}px`;
-                circle.style.animationDuration = `${8 + Math.random() * 8}s`;
-                container.appendChild(circle);
-        }
-        document.body.appendChild(container);
-}
-createFloatingObjects();
+// function createFloatingObjects() {
+//         const container = document.createElement('div');
+//         container.className = 'fixed top-0 left-0 w-full h-full pointer-events-none z-0';
+//         for (let i = 0; i < 8; i++) {
+//                 const circle = document.createElement('div');
+//                 circle.className = 'floating-circle';
+//                 circle.style.left = `${Math.random() * 100}%`;
+//                 circle.style.top = `${Math.random() * 100}%`;
+//                 circle.style.width = circle.style.height = `${40 + Math.random() * 60}px`;
+//                 circle.style.animationDuration = `${8 + Math.random() * 8}s`;
+//                 container.appendChild(circle);
+//         }
+//         document.body.appendChild(container);
+// }
+// createFloatingObjects();
 
 // Particules et lignes animées (effet constellation)
 const canvas = document.getElementById('particles-bg');
